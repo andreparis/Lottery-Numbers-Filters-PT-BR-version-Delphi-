@@ -1,0 +1,701 @@
+object Main: TMain
+  Left = -8
+  Top = -8
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Conferir Jogo'
+  ClientHeight = 685
+  ClientWidth = 1366
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = 16
+  Font.Name = 'Arial'
+  Font.Style = [fsBold]
+  FormStyle = fsMDIForm
+  Icon.Data = {
+    0000010001002020000001002000A81000001600000028000000200000004000
+    0000010020000000000000100000120B0000120B000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000398500B7398500483985000300000000000000000000
+    0000398500FF398500FF398500FF398500FF398500FF398500FF398500FF3985
+    00FF398500FF398500FF398500FF398500FF398500FF398500FF398500FF3985
+    00FF398500FF398500FF398500FF398500FF398500FF398500FF398500FF3985
+    00FF398500FF398500FF398500FF398500FF398500DB3985006C3985000C0000
+    0000398500FF398500FF398500FF398500FF398500FF398500FF398500FF3985
+    00FF398500FF398500FF398500FF398500FF398500FF398500FF398500FF3985
+    00FF398500FF398500FF398500FF398500FF398500FF398500FF398500FF3985
+    00FF398500FF398500FF398500FF398500FF398500E13985006F3985000C0000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000398500C6398500573985000300000000000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF00000000F5F5FB0DB5B5E72B1414BA750000B5080000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF00000000000000000000B56A0000B5FF0000B5710000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF00000000000000000000B5340000B5FF0000B5B90000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF00000000000000000000B50B0000B5FF0000B5FF0000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF0000000000000000000000000000B5F30000B5FF0000
+    B511000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000000000000000000000000000B5180000B5780000
+    B5970000B5380000000000000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF0000000000000000000000000000B5AB0000B5FF0000
+    B53F000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000B57F0000B5FF0000B5FF0000
+    B5FF0000B5FF0000B58C00000000000000000000000000000000000000000000
+    0000AA4400FFAA4400FF0000000000000000000000000000B55D0000B5FF0000
+    B589000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000B5040000B5AB0000B5FF0000B5FF0000B5830000
+    B5550000B5FF0000B5FF0000B53B000000000000000000000000000000000000
+    0000AA4400FFAA4400FF0000000000000000000000000000B51F0000B5FF0000
+    B5DC000000000000000000000000000000000000000000000000000000000000
+    0000000000000000B5070000B5C50000B5FF0000B5F80000B526000000000000
+    00000000B5560000B5FF0000B5E3000000000000000000000000000000000000
+    0000AA4400FFAA4400FB0000000000000000000000000000B5010000B5FF0000
+    B5FF0000B5080000000000000000000000000000000000000000000000000000
+    00000000B5100000B5E20000B5FF0000B5DB0000B51000000000000000000000
+    0000000000000000B5E20000B5FF0000B5340000000000000000000000000000
+    0000AA4400FFAA4400FF000000000000000000000000000000000000B5B20000
+    B5FF0000B5450000000000000000000000000000000000000000000000000000
+    B50B0000B5E70000B5FF0000B5E60000B50B0000000000000000000000000000
+    0000000000000000B5590000B5FF0000B5B30000000000000000000000000000
+    0000AA4400FFAA4400FF000000000000000000000000000000000000B54E0000
+    B5FF0000B5A800000000000000000000000000000000000000000000B5100000
+    B5DD0000B5FF0000B5E20000B510000000000000000000000000000000000000
+    0000000000000000B5070000B5FF0000B5FF0000B50700000000000000000000
+    0000AA4400FFAA4400FF000000000000000000000000000000000000B50D0000
+    B5FF0000B5FF0000B50B0000000000000000000000000000B5220000B5F10000
+    B5FF0000B5C40000B50600000000000000000000000000000000000000000000
+    000000000000000000000000B5B40000B5FF0000B54500000000000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    B59E0000B5FF0000B57500000000000000000000B54E0000B5FF0000B5FF0000
+    B5B00000B5040000000000000000000000000000000000000000000000000000
+    000000000000000000000000B54E0000B5FF0000B5A900000000000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    B51F0000B5FF0000B5FF0000B59A0000B5CA0000B5FF0000B5FF0000B5870000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000B50B0000B5FF0000B5FF0000B501000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    00000000B54E0000B5FF0000B5FF0000B5FF0000B5F40000B541000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000B5D50000B5FF0000B527000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000B5110000B5570000B52D0000B50300000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000B5790000B5FF0000B571000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000B52C0000B5FF0000B5CC000000000000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000B5030000B5FF0000B5FF0000B5070000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000B5C00000B5FF0000B5330000
+    0000AA4400FFAA4400FF00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000B56D0000B5FF0000B57BAA44
+    00C6AA4400FFAA4400FFAA4400B7000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000B5290000B5FF0000B5CFAA44
+    0057AA4400FFAA4400FFAA440048000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000B5030000B5FF0000B5FFAA44
+    0003AA4400E1AA4400DBAA440003000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000000000000000000000000000B5C70000B5FF0000
+    0000AA44006FAA44006C00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000000000000000000000000000B5740000B5FF0000
+    0000AA44000CAA44000C00000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000000000000000000000000000B5080000B56AFFFF
+    FFE380000000800000009FFFFFE39FFFFFFF9FFFFFFF9FFFFFFF90FFFFFF98FF
+    FFFF98FFFFFF98FFFFFF9C7FFC3F9C7FF81F9C7FE00F9C7FC18F9C3F83C79E3F
+    07C79E3E0FC39E1C1FE39F183FE39F00FFE19F81FFF19FC3FFF19FFFFFF19FFF
+    FFF09FFFFFF89FFFFFF80FFFFFF80FFFFFF80FFFFFFC9FFFFFFC9FFFFFFC}
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Visible = True
+  OnCreate = CreateForm
+  PixelsPerInch = 96
+  TextHeight = 16
+  object lbConfirmGame: TLabel
+    Left = 184
+    Top = 208
+    Width = 265
+    Height = 19
+    Caption = 'Digite o Jogo que deseja conferir:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 20
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbCheckBox: TLabel
+    Left = 184
+    Top = 8
+    Width = 141
+    Height = 18
+    Caption = 'Selecione os filtros:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Bevel1: TBevel
+    Left = 200
+    Top = 40
+    Width = 905
+    Height = 153
+  end
+  object Bevel2: TBevel
+    Left = 432
+    Top = 352
+    Width = 449
+    Height = 265
+  end
+  object lbCok: TLabel
+    Left = 640
+    Top = 368
+    Width = 73
+    Height = 16
+    Caption = 'APROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbCfail: TLabel
+    Left = 640
+    Top = 368
+    Width = 81
+    Height = 16
+    Caption = 'REPROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbSeqFail: TLabel
+    Left = 664
+    Top = 400
+    Width = 81
+    Height = 16
+    Caption = 'REPROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbPairFail: TLabel
+    Left = 704
+    Top = 432
+    Width = 81
+    Height = 16
+    Caption = 'REPROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbDezFail: TLabel
+    Left = 728
+    Top = 464
+    Width = 81
+    Height = 16
+    Caption = 'REPROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbOddFail: TLabel
+    Left = 720
+    Top = 496
+    Width = 81
+    Height = 16
+    Caption = 'REPROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbSeqOk: TLabel
+    Left = 664
+    Top = 400
+    Width = 73
+    Height = 16
+    Caption = 'APROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbPairOk: TLabel
+    Left = 704
+    Top = 432
+    Width = 73
+    Height = 16
+    Caption = 'APROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbDezOk: TLabel
+    Left = 728
+    Top = 464
+    Width = 73
+    Height = 16
+    Caption = 'APROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbOddOk: TLabel
+    Left = 720
+    Top = 496
+    Width = 73
+    Height = 16
+    Caption = 'APROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbCount: TLabel
+    Left = 456
+    Top = 368
+    Width = 174
+    Height = 16
+    Caption = 'Soma dos n'#250'meros do jogo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbSeq: TLabel
+    Left = 456
+    Top = 400
+    Width = 182
+    Height = 16
+    Caption = 'Proibir sequ'#234'ncia de valores'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbPairs: TLabel
+    Left = 456
+    Top = 432
+    Width = 240
+    Height = 16
+    Caption = 'Proibir quantidade de pares definidos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbDezenas: TLabel
+    Left = 456
+    Top = 464
+    Width = 258
+    Height = 16
+    Caption = 'Proibir quantidade de dezenas definidas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbOdds: TLabel
+    Left = 456
+    Top = 496
+    Width = 256
+    Height = 16
+    Caption = 'Proibir quantidade de '#237'mpares definidos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbQuadra: TLabel
+    Left = 456
+    Top = 528
+    Width = 47
+    Height = 16
+    Caption = 'Quadra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbQuina: TLabel
+    Left = 456
+    Top = 560
+    Width = 38
+    Height = 16
+    Caption = 'Quina'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbSena: TLabel
+    Left = 456
+    Top = 592
+    Width = 33
+    Height = 16
+    Caption = 'Sena'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbQuadraOk: TLabel
+    Left = 512
+    Top = 528
+    Width = 73
+    Height = 16
+    Caption = 'APROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbQuadraFail: TLabel
+    Left = 512
+    Top = 528
+    Width = 81
+    Height = 16
+    Caption = 'REPROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbQuinaFail: TLabel
+    Left = 504
+    Top = 560
+    Width = 81
+    Height = 16
+    Caption = 'REPROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbSenaFail: TLabel
+    Left = 504
+    Top = 592
+    Width = 81
+    Height = 16
+    Caption = 'REPROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbQuinaOk: TLabel
+    Left = 504
+    Top = 560
+    Width = 73
+    Height = 16
+    Caption = 'APROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbSenaOk: TLabel
+    Left = 504
+    Top = 592
+    Width = 73
+    Height = 16
+    Caption = 'APROVADO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object lbFinish: TLabel
+    Left = 592
+    Top = 632
+    Width = 96
+    Height = 24
+    Caption = 'Conclu'#237'do'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 24
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object edtGame: TEdit
+    Left = 280
+    Top = 248
+    Width = 793
+    Height = 26
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnConfirm: TButton
+    Left = 608
+    Top = 288
+    Width = 177
+    Height = 49
+    Caption = 'Confirmar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = btnConfirmClick
+  end
+  object cbBetInterval: TCheckBox
+    Left = 224
+    Top = 56
+    Width = 297
+    Height = 41
+    Checked = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 2
+  end
+  object cbSeqGame: TCheckBox
+    Left = 216
+    Top = 128
+    Width = 297
+    Height = 41
+    Caption = 'Proibir sequ'#234'ncia maior que 2 '
+    Checked = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 3
+  end
+  object cbLines: TCheckBox
+    Left = 536
+    Top = 128
+    Width = 241
+    Height = 41
+    Checked = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 4
+  end
+  object cbPair: TCheckBox
+    Left = 544
+    Top = 56
+    Width = 241
+    Height = 41
+    Checked = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 5
+  end
+  object cbOdd: TCheckBox
+    Left = 816
+    Top = 56
+    Width = 241
+    Height = 41
+    Checked = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 6
+  end
+  object pb1: TProgressBar
+    Left = 576
+    Top = 632
+    Width = 225
+    Height = 17
+    TabOrder = 7
+  end
+  object cbSena: TCheckBox
+    Left = 808
+    Top = 128
+    Width = 257
+    Height = 33
+    Caption = 'Conferir Quadra, Quina ou Sena'
+    Checked = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 18
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 8
+  end
+  object mmoResult: TMemo
+    Left = 616
+    Top = 528
+    Width = 241
+    Height = 89
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    Lines.Strings = (
+      'Quadra, Quina ou Sena?')
+    ParentFont = False
+    TabOrder = 9
+  end
+  object MainMenu1: TMainMenu
+    Left = 8
+    object options: TMenuItem
+      Caption = 'Op'#231#245'es'
+      object checkResult: TMenuItem
+        Caption = 'Checar Jogo'
+        Enabled = False
+      end
+      object GerarJogos1: TMenuItem
+        Caption = 'Gerar Jogos'
+        OnClick = GerarJogos1Click
+      end
+      object Configuraes1: TMenuItem
+        Caption = 'Configura'#231#245'es'
+        OnClick = Configuraes1Click
+      end
+      object exit: TMenuItem
+        Caption = 'Fechar'
+        OnClick = exitClick
+      end
+    end
+  end
+end

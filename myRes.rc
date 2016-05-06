@@ -1,0 +1,31 @@
+
+#define IDR_VERSION1  1
+icon1 ICON firstIcon.ico
+IDR_VERSION1 VERSIONINFO LOADONCALL MOVEABLE DISCARDABLE IMPURE
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+FILEFLAGS 0
+FILEOS VOS_DOS_WINDOWS32
+FILETYPE VFT_DLL
+FILESUBTYPE 0
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "041504E2"
+  {
+   VALUE "CompanyName", "Paris Dev\0"
+   VALUE "FileDescription", "Lottery number generator\0"
+   VALUE "ProductName", "Loteria\0"
+   VALUE "FileVersion", "1.0.0.0\0"
+   VALUE "ProductVersion", "1.0.0.0\0"
+  }
+
+ }
+
+ //BLOCK "VarFileInfo"
+ //{
+ // VALUE "Translation", 0x0415, 1250
+ //}
+
+}
